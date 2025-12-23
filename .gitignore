@@ -6,10 +6,12 @@ node_modules/
 .next/
 dist/
 out/
+build/
 
 # Environment & secrets
 .env
 .env.*
+!.env.example
 *.local
 
 # Logs
@@ -25,8 +27,44 @@ logs/
 .turbo/
 .cache/
 .eslintcache
+.prettiercache
+
+# Prisma
+# Generated Prisma Client (nếu generate vào thư mục generated)
+generated/
+# Prisma migrations (uncomment nếu không muốn commit migrations)
+# prisma/migrations/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
 
