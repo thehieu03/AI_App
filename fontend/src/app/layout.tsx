@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Toaster } from "~/components/ui/sonner";
 import { Providers } from "~/components/providers";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -18,7 +19,7 @@ const geist = Geist({
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" className={`${geist.variable}`}>
       <body>

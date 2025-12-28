@@ -200,7 +200,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "D:\\AI_APP\\fontend\\generated\\prisma",
+      "value": "/Users/namhai/Documents/GitHub/AI_App/fontend/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -209,12 +209,12 @@ const config = {
     "binaryTargets": [
       {
         "fromEnvVar": null,
-        "value": "windows",
+        "value": "darwin-arm64",
         "native": true
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\AI_APP\\fontend\\prisma\\schema.prisma",
+    "sourceFilePath": "/Users/namhai/Documents/GitHub/AI_App/fontend/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
