@@ -14,11 +14,12 @@ import { User, Sparkles, Settings } from "lucide-react";
 import Link from "next/link";
 import SidebarMenuItems from "./sidebar-menu-items";
 import MobileSidebarClose from "~/components/sidebar/mobile-sidebar-close";
+import Credits from "./credits";
 const AppSidebar = () => {
   return (
     <Sidebar className="from-background to-muted/20 border-r-0 bg-gradient-to-b">
       <SidebarContent className="px-3">
-        <MobileSidebarClose/>
+        <MobileSidebarClose />
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary mt-6 mb-8 flex flex-col items-start justify-start px-3">
             <Link
@@ -42,7 +43,9 @@ const AppSidebar = () => {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-muted/30 border-t p-3">
-        <div className="mb-3 flex w-full items-center justify-center gap-2 text-xs"></div>
+        <div className="mb-3 flex w-full items-center justify-center gap-2 text-xs">
+          <Credits />
+        </div>
         <UserButton
           variant="outline"
           className="border-muted-foreground/20 hover:border-primary/50 w-full transition-colors"
