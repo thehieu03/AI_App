@@ -35,8 +35,8 @@ const Credits = () => {
 
   return (
     <div className="group hover:bg-muted/50 flex items-center gap-2 rounded-lg p-2 transition-colors">
-      <Coins className="h-4 w-4 text-yellow-500 transition-colors group-hover:text-yellow-600" />
-      <span className="text-muted-foreground group-hover:text-foreground text-sm transition-colors">
+      <Coins className="h-4 w-4 text-yellow-500 transition-colors group-hover:text-yellow-700" />
+      <span className="text-muted-foreground group-hover:text-foreground text-sm transition-colors group-hover:font-semibold">
         {credits} Credits
       </span>
     </div>

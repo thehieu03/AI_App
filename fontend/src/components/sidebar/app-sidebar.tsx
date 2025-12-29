@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { UserButton } from "@daveyplate/better-auth-ui";
 import {
   Sidebar,
