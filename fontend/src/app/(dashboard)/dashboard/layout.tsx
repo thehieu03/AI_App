@@ -1,5 +1,5 @@
 import "~/styles/globals.css";
-import React from "react";
+import React, { type ReactNode } from "react";
 import { Providers } from "~/components/providers";
 import { Toaster } from "~/components/ui/sonner";
 import {
@@ -24,37 +24,35 @@ export const metadata: Metadata = {
 };
 
 interface Props {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const RootLayout =async ({ children }: Props) => {
+const RootLayout = async ({ children }: Props) => {
   return (
     <Providers>
       <SidebarProvider>
         <AppSidebar />
-        <SidebarTrigger>
-          <SidebarInset className="flex h-screen flex-col">
-            <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 border-border/40 backdrop-blur sticky top-0 z-10 border-b px-6 py-3 shadow-sm">
-              <div className="flex shrink-0 grow items-center gap-3">
-                <SidebarTrigger className="hover:bg-muted -ml-1 h-8 w-8 transition-colors" />
-                <Separator
-                  orientation="vertical"
-                  className="mr-2 h-6 data-[orientation=vertical]:h-6"
-                />
-                <Breadcrumb>
-                  <BreadcrumbList>
-                    <BreadcrumbItem>
-                      <BreadcrumbPageClient />
-                    </BreadcrumbItem>
-                  </BreadcrumbList>
-                </Breadcrumb>
-              </div>
-            </header>
-            <main className="from-background to-muted/20 flex-1 overflow-y-auto bg-gradient-to-br p-6">
-              {children}
-            </main>
-          </SidebarInset>
-        </SidebarTrigger>
+        <SidebarInset className="flex h-screen flex-col">
+          <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 border-border/40 sticky top-0 z-10 border-b px-6 py-3 shadow-sm backdrop-blur">
+            <div className="flex shrink-0 grow items-center gap-3">
+              <SidebarTrigger className="hover:bg-muted -ml-1 h-8 w-8 transition-colors" />
+              <Separator
+                orientation="vertical"
+                className="mr-2 h-6 data-[orientation=vertical]:h-6"
+              />
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbPageClient />
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
+          </header>
+          <main className="from-background to-muted/20 flex-1 overflow-y-auto bg-gradient-to-br p-6">
+            {children}
+          </main>
+        </SidebarInset>
       </SidebarProvider>
       <Toaster />
     </Providers>
