@@ -12,10 +12,13 @@ import {
 } from "~/components/ui/sidebar";
 import { User, Sparkles, Settings } from "lucide-react";
 import Link from "next/link";
+import SidebarMenuItems from "./sidebar-menu-items";
+import MobileSidebarClose from "~/components/sidebar/mobile-sidebar-close";
 const AppSidebar = () => {
   return (
     <Sidebar className="from-background to-muted/20 border-r-0 bg-gradient-to-b">
       <SidebarContent className="px-3">
+        <MobileSidebarClose/>
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary mt-6 mb-8 flex flex-col items-start justify-start px-3">
             <Link
@@ -31,6 +34,11 @@ const AppSidebar = () => {
               Studio
             </p>
           </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu className="space-y-1">
+              <SidebarMenuItems />
+            </SidebarMenu>
+          </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="bg-muted/30 border-t p-3">
