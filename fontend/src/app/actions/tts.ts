@@ -1,6 +1,5 @@
 "use server";
 import { cache } from "react";
-import { getSession } from "better-auth/api";
 import { auth } from "~/lib/auth";
 import { headers } from "next/headers";
 import { db } from "~/server/db";
