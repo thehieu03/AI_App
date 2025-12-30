@@ -21,7 +21,7 @@ const Credits = () => {
       }
     };
 
-    fetchCredits();
+    void fetchCredits();
   }, []);
 
   if (loading) {

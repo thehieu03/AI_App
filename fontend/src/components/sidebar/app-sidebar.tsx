@@ -14,6 +14,7 @@ import Link from "next/link";
 import SidebarMenuItems from "./sidebar-menu-items";
 import MobileSidebarClose from "~/components/sidebar/mobile-sidebar-close";
 import Credits from "./credits";
+import Upgrade from "./upgrade";
 const AppSidebar = () => {
   return (
     <Sidebar className="from-background to-muted/20 border-r-0 bg-gradient-to-b">
@@ -44,6 +45,7 @@ const AppSidebar = () => {
       <SidebarFooter className="bg-muted/30 border-t p-3">
         <div className="mb-3 flex w-full items-center justify-center gap-2 text-xs">
           <Credits />
+          <Upgrade />
         </div>
         <UserButton
           variant="outline"
