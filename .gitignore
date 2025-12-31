@@ -1,20 +1,64 @@
+# ============================================
 # Dependencies
+# ============================================
+# Node.js
 node_modules/
 .pnpm-store/
+.yarn/
+.pnp/
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+__pypackages__/
+Pipfile.lock
+
+# ============================================
 # Build output
+# ============================================
+# Next.js
 .next/
-dist/
 out/
+dist/
 build/
 
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.c
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+MANIFEST
+
+# ============================================
 # Environment & secrets
+# ============================================
 .env
 .env.*
 !.env.example
 *.local
+.envrc
 
+# ============================================
 # Logs
+# ============================================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -22,28 +66,130 @@ pnpm-debug.log*
 logs/
 *.log
 
+# ============================================
 # Tools & caches
+# ============================================
 .vercel/
 .turbo/
 .cache/
 .eslintcache
 .prettiercache
 
+# Python tools
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+.coverage.*
+*.cover
+.hypothesis/
+htmlcov/
+nosetests.xml
+coverage.xml
+
+# ============================================
+# Docker
+# ============================================
+docker-compose.override.yml
+.dockerignore
+
+# ============================================
 # Prisma
+# ============================================
 # Generated Prisma Client (nếu generate vào thư mục generated)
 generated/
 # Prisma migrations (uncomment nếu không muốn commit migrations)
 # prisma/migrations/
 
+# ============================================
 # TypeScript
+# ============================================
 *.tsbuildinfo
 next-env.d.ts
 
+# ============================================
 # Testing
+# ============================================
 coverage/
 .nyc_output/
 
+# ============================================
+# Python Virtual Environments
+# ============================================
+venv/
+env/
+ENV/
+.venv/
+**/venv/
+**/env/
+**/.venv/
+**/ENV/
+**/source/
+env.bak/
+venv.bak/
+.python-version
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite3
+db.sqlite3-journal
+
+# ============================================
+# Jupyter Notebook & IPython
+# ============================================
+.ipynb_checkpoints
+*.ipynb
+profile_default/
+ipython_config.py
+
+# ============================================
+# Python Frameworks
+# ============================================
+# Django
+local_settings.py
+/media
+/staticfiles
+/static
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+target/
+
+# ============================================
+# Python Task Runners
+# ============================================
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# ============================================
+# Python Misc
+# ============================================
+*.sage.py
+*.mo
+*.pot
+
+# ============================================
 # IDE & Editors
+# ============================================
 .vscode/
 .idea/
 *.swp
@@ -52,8 +198,15 @@ coverage/
 .project
 .classpath
 .settings/
+*.sublime-project
+*.sublime-workspace
+.spyderproject
+.spyproject
+.ropeproject
 
+# ============================================
 # OS files
+# ============================================
 .DS_Store
 .DS_Store?
 ._*
@@ -63,8 +216,9 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
+# ============================================
 # Temporary files
+# ============================================
 *.tmp
 *.temp
-.cache/
-
+*.bak
